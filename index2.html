@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Communication Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background-color: #f0f4f8; color: #333; position: relative; }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a3d62;
+      padding-right: 120px;
+    }
+    h2 { font-size: 1.8rem; margin-top: 2rem; color: #1e3799; }
+    p:first-of-type {
+      padding-right: 120px;
+    }
+    .tabs, .interview-tabs, .section-nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .tab-button, .interview-button, .section-button {
+      padding: 0.5rem 1rem;
+      background-color: #d0dff7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #0a3d62;
+      font-weight: bold;
+    }
+    .tab-button.active, .interview-button.active, .section-button.active {
+      background-color: #0a3d62;
+      color: #fff;
+    }
+    .tab-content, .interview-content {
+      display: none;
+      margin-top: 2rem;
+    }
+    .tab-content.active, .interview-content.active {
+      display: block;
+    }
+    .card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(10, 61, 98, 0.1);
+      margin-bottom: 2rem;
+    }
+    ul { margin-left: 1.5rem; }
+    .example {
+      background: #e8f0fc;
+      padding: 1rem;
+      border-radius: 5px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    .logo {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 100px;
+      height: auto;
+    }
+    .question-section {
+      margin-top: 3rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    button.save-btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #0a3d62;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img src="ge-logo.png" alt="GE Aerospace Logo" class="logo">
+  <h1>Professional Communication in the Aerospace Industry</h1>
+  <p>This portfolio draws from my Communication Research Report (CRR), which examined how GE Aerospace's internal and external communication strategies affect workplace culture, safety, diversity, and credibility. Understanding these strategies is essential not just for current employees but also for students and professionals entering similar technical environments. The lessons here offer actionable techniques that help navigate and succeed in such high-stakes industries.</p>
+
+  <div class="section-nav">
+    <button class="section-button" onclick="scrollToSection('email-section')">Emails</button>
+    <button class="section-button" onclick="scrollToSection('interview-section')">Interview</button>
+    <button class="section-button" onclick="scrollToSection('meeting-section')">Meeting Communication</button>
+    <button class="section-button" onclick="scrollToSection('nda-section')">NDA Communication</button>
+  </div>
+
+  <!-- EMAIL SECTION -->
+  <h2 id="email-section">Email Communication</h2>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('follow')">Follow-Up</button>
+    <button class="tab-button" onclick="showTab('mass')">Mass</button>
+    <button class="tab-button" onclick="showTab('confirmation')">Confirmation</button>
+    <button class="tab-button" onclick="showTab('request')">Request</button>
+  </div>
+
+  <div id="follow" class="tab-content active">
+    <div class="card">
+      <h3>Follow-Up Emails</h3>
+      <p>Follow-ups are essential at GE Aerospace, where complex projects often involve multiple checkpoints and stakeholders. These emails maintain accountability and keep timelines transparent.</p>
+      <ul>
+        <li>Greet professionally</li>
+        <li>Reference previous conversation</li>
+        <li>Politely ask for a status update</li>
+        <li>Close with appreciation and a signature</li>
+      </ul>
+      <div class="example">
+Subject: Following Up on Project Timeline
+
+Hello [Name],
+
+I hope you're well. I wanted to follow up on our last discussion regarding the project deliverables. Do you have an update on the revised schedule?
+
+Best regards,  
+[Your Name]
+      </div>
+    </div>
+  </div>
+
+  <div id="mass" class="tab-content">
+    <div class="card">
+      <h3>Mass Emails</h3>
+      <p>Mass emails communicate announcements or deliverables to broad internal teams. These should be clear and respect privacy boundaries.</p>
+      <ul>
+        <li>Use a clear subject line</li>
+        <li>Keep message brief</li>
+        <li>Use BCC for privacy</li>
+        <li>Include relevant attachments</li>
+      </ul>
+      <img src="mass-email-example.png" alt="Screenshot of a mass email example" style="width:100%; max-width:700px; border-radius:10px; margin-top:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
+      <p style="font-size: 0.95rem; color: #555;">Screenshot: Sample mass email shared during onboarding week.</p>
+    </div>
+  </div>
+  <div id="confirmation" class="tab-content">
+    <div class="card">
+      <h3>Confirmation Emails</h3>
+      <p>Confirmations ensure all parties are aligned on meetings or deliverables. At GE, such communication reinforces efficiency and reduces missteps.</p>
+      <ul>
+        <li>Greet recipient</li>
+        <li>Confirm specific details</li>
+        <li>Add final comments if needed</li>
+      </ul>
+      <div class="example">
+  Subject: Re: Meeting Schedule
+  
+  Hi [Name],
+  
+  Confirming I’ll be there at 2 PM on Thursday. Looking forward to it!
+  
+  Best,  
+  [Your Name]
+      </div>
+    </div>
+  </div>
+  
+  <div id="request" class="tab-content">
+    <div class="card">
+      <h3>Request Emails</h3>
+      <p>Clarity in requests avoids errors in engineering roles. Emails must include sufficient context while being concise and polite.</p>
+      <ul>
+        <li>State request clearly</li>
+        <li>Provide background</li>
+        <li>Be polite</li>
+        <li>Offer follow-up availability</li>
+      </ul>
+      <div class="example">
+  Subject: Request for Project Files
+  
+  Hi [Name],
+  
+  Would you be able to send over the final design files for the [Project Name]? I’m finalizing the documentation today and want to ensure it’s accurate.
+  
+  Thanks in advance!  
+  [Your Name]
+      </div>
+    </div>
+  </div>
+
+  <h2 id="interview-section">Interview Communication</h2>
+  <div class="interview-tabs">
+    <button class="interview-button active" onclick="showInterview('before')">Before the Interview</button>
+    <button class="interview-button" onclick="showInterview('during')">During the Interview</button>
+    <button class="interview-button" onclick="showInterview('after')">After the Interview</button>
+  </div>
+
+  <div id="before" class="card interview-content active">
+    <h3>Before the Interview</h3>
+    <p>This section covers preparation for <strong>technical job interviews</strong> at GE Aerospace and similar companies. These interviews typically evaluate your engineering skills, your understanding of the industry, and how well you communicate under pressure.</p>
+    <ul>
+      <li>Research recent aerospace projects using GE’s press page or LinkedIn</li>
+      <li>Review the job description and align your experiences using the STAR method (Situation, Task, Action, Result)</li>
+      <li>Prepare 2–3 anecdotes that highlight teamwork, problem-solving, and leadership in technical contexts</li>
+    </ul>
+  </div>
+
+  <div id="during" class="card interview-content">
+    <h3>During the Interview</h3>
+    <p>Technical job interviews simulate real-world challenges and collaborative problem-solving. Clear communication here demonstrates your readiness to join high-performance engineering teams.</p>
+    <ul>
+      <li>Maintain confident, professional body language (especially in virtual interviews)</li>
+      <li>Answer using structured examples, especially for behavioral and technical questions</li>
+      <li>Ask specific questions about team structure, project timelines, or technology stacks</li>
+    </ul>
+  </div>
+
+  <div id="after" class="card interview-content">
+    <h3>After the Interview</h3>
+    <p>Post-interview communication helps reinforce your interest and allows you to reflect on your performance.</p>
+    <ul>
+      <li>Send a thoughtful, personalized thank-you email within 24 hours</li>
+      <li>Note which questions were most challenging and use them to prepare for future interviews</li>
+    </ul>
+  </div>
+
+  <h2 id="meeting-section">Team Meeting Communication</h2>
+  <div class="card">
+    <h3>Weekly Project Sync Summaries</h3>
+    <p>Meetings are a staple of technical environments. Sending summaries afterward keeps accountability and supports distributed teams.</p>
+    <div class="example">
+Subject: Summary – 4/1 Project Sync (Scrum Team Alpha)
+
+Hi team,
+
+Here’s a quick recap of today’s meeting:
+- John will update the sensor firmware by Friday
+- I’ll complete the design validation write-up
+- Sara is reviewing test data from last week’s run
+
+Next sync: Monday @ 10 AM
+
+Best,  
+Andrew
+    </div>
+  </div>
+
+  <h2 id="nda-section">Understanding and Communicating about NDAs at GE Aerospace</h2>
+  <div class="card">
+    <h3>Purpose</h3>
+    <p>Uphold GE Aerospace’s commitment to protecting intellectual property, proprietary systems, and sensitive project information through responsible workplace communication.</p>
+
+    <h3>Step-by-Step Guidelines</h3>
+    <ul>
+      <li><strong>Understand GE’s NDA Scope:</strong> NDAs at GE Aerospace often cover cutting-edge engine technologies, system architecture, internal testing protocols, supplier relationships, and government-contracted work. Review onboarding materials or ask your mentor/team lead for clarity.</li>
+      <li><strong>Respect Boundaries in Conversations:</strong> Avoid discussing project-specific data, tools, or timelines—even in casual conversations, external meetings, or networking events.</li>
+      <li><strong>Handle Questions with Care:</strong> Maintain professionalism and avoid revealing confidential content when asked about restricted work.</li>
+    </ul>
+
+    <h3>Sample Response</h3>
+    <div class="example">
+“Due to the nature of our work under a non-disclosure agreement, I can’t share specifics, but I’d be happy to talk about the kind of engineering challenges I’ve tackled and general areas I support within the team.”
+    </div>
+
+    <h3>Guidelines for GE Aerospace Interns and Engineers</h3>
+    <ul>
+      <li><strong>Check with Your Supervisor:</strong> When unsure about disclosure boundaries—whether in a presentation, meeting, or email—always ask your supervisor or GE legal.</li>
+      <li><strong>Avoid Public Disclosure:</strong> Refrain from posting photos of workspaces, test benches, CAD models, or identifiable project components on social media.</li>
+      <li><strong>Secure Communications:</strong> Never forward internal emails or technical documents outside GE systems. Avoid using personal devices for company files unless explicitly approved and secured.</li>
+    </ul>
+
+    <h3>Justification Summary</h3>
+    <p>These instructional moments reflect real scenarios at GE Aerospace where technical communication intersects with legal boundaries. Navigating NDA-covered work builds trust, reinforces compliance, and cultivates professional maturity—skills essential for long-term success in aerospace and defense engineering.</p>
+  </div>
+
+  
+  <!-- FEEDBACK QUESTIONS -->
+  <div class="question-section">
+    <h2>We'd love your feedback</h2>
+    <label for="question1">1. What did you learn most from this presentation?</label>
+    <textarea id="question1" placeholder="Your answer..."></textarea>
+
+    <label for="question2">2. What topics would you like to hear more about?</label>
+    <textarea id="question2" placeholder="Your answer..."></textarea>
+
+    <button class="save-btn" onclick="saveAnswers()">Download My Responses</button>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function showInterview(id) {
+      document.querySelectorAll('.interview-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.interview-button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({ top: element.offsetTop - 20, behavior: 'smooth' });
+      }
+    }
+
+    function saveAnswers() {
+      const answer1 = document.getElementById('question1').value;
+      const answer2 = document.getElementById('question2').value;
+      const content = `1. What did you learn most from this presentation?\n${answer1}\n\n2. What topics would you like to hear more about?\n${answer2}`;
+      const blob = new Blob([content], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.download = 'presentation-feedback.txt';
+      link.href = window.URL.createObjectURL(blob);
+      link.click();
+    }
+  </script>
+</body>
+</html>
